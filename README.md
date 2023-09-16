@@ -62,3 +62,18 @@
  From here we can see total number of cells is 9541 and dff (sky130_fd_sc_hd__dfxtp_2)is 1596, thus the ratio is 0.1672
  
 </details>
+
+
+
+
+<details>
+  <summary>
+    DAY2:Good Floorplan vs Bad Floorplan and introduction to Library cells
+  </summary>
+  <br>
+ ## Chip floorplanning : 
+
+  + Defining the width and height of core and die : In defining the width and height *Utilization Factor* plays an important role , UTILISATION FACTOR = Area Occupied by the Netlist / Area of the core, Aspect ratio=Height / width
+  + 
+  
+</details>
