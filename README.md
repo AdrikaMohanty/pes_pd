@@ -71,7 +71,7 @@
     DAY2:Good Floorplan vs Bad Floorplan and introduction to Library cells
   </summary>
   <br>
- ## Chip floorplanning : 
+   ## Chip floorplanning : 
 
   + Defining the width and height of core and die : In defining the width and height *Utilization Factor* plays an important role , UTILISATION FACTOR = Area Occupied by the Netlist / Area of the core, Aspect ratio=Height / width
   + Defining location of pre placed cells: Some IPs such as memories , clock gating cells, comparator , mux needs to be instantiated multiple times , such IPs are placed on chip before automated placement and routing .
@@ -90,7 +90,44 @@
     run_synthesis
     run_floorplan
     ```
+  ![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/52f3f496-fbc2-43d9-895f-78394d333a49)
 
-    
+
+  ![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/aa8949fa-8632-4ae6-9cb2-c0afe846f480)
+
+
+
+  ![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/4da51cc5-f87e-4cc2-905e-1d9154fd741a)
+
+  ![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/4e8d3b99-6746-4e08-8036-76d7b5f241c8)
+
   
+
+
+
+  
+</details>
+
+
+<details>
+  <summary>DAY3 : CMOS Inverter ngspice simulations</summary>
+
+  git clone the following to get all the necessary files
+  ```
+cd OpenLane
+git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+cd vsdstdcelldesign
+```
+
+make sure your sky130A.tech file is in ```vsdstdcelldesign``` folder , if not you can copy it .
+
+To view the layout use the following command :
+```
+magic -T sky130A.tech sky130_inv.mag &
+```
+
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/d64397ed-3638-4bcb-a767-0ca177d82910)
+
+
+
 </details>
