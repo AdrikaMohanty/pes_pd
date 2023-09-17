@@ -152,6 +152,14 @@ to see the ngspice simulation:
 
 
 
+To get the transient analysis of inverter you can do 
+```plot y vs time a```
+
+
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/234693ef-0fcd-41a0-a4f2-0050dd06c6b8)
+
+
+
 
 
 
