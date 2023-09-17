@@ -128,6 +128,31 @@ magic -T sky130A.tech sky130_inv.mag &
 
 ![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/d64397ed-3638-4bcb-a767-0ca177d82910)
 
+we perform sll the dimulstions on the spice file , to extract the spice file use the following command in tckcon window:
+
+```
+pwd
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+
+```
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/48ecf6b4-a777-445d-8127-7c0b59b606d7)
+
+you need to make some changes in the spice file to get the simulation results :
+
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/839c3b13-32cc-45d9-b409-44eda5318644)
+
+
+to see the ngspice simulation:
+```ngspice sky130_inv.spice```
+
+
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/faf3ee6a-f41d-4036-bf30-3125ab74a7e1)
+
+
+
+
 
 
 </details>
