@@ -244,9 +244,19 @@ To ensure that :
 In magic press ```g``` this activates the grid ,
 
 Before invoking the grid :
+
+
+
+
 ![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/88aea553-80fd-478f-ba24-76d3ef06a9f9)
 
+
+
+
 After the grid invokement 
+
+
+
 
 ![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/fd03075f-51d8-47b3-8aea-ebf267f5e2f5)
 
@@ -263,6 +273,9 @@ This will create the lef file
 ## Including custom cell into openlane :
 
 Do the following :
+
+
+
 ![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/f266ab02-a770-44a5-bf3c-b796b38dda01)
 
 
