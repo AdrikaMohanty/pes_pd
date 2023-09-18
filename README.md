@@ -260,6 +260,18 @@ This will create the lef file
 ![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/3709e3e7-69d4-4cfc-9914-732157623882)
 
 
+## Including custom cell into openlane :
+
+Do the following :
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/f266ab02-a770-44a5-bf3c-b796b38dda01)
+
+
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/c31f7db5-1498-4174-8f0d-59866d109eb8)
+
+
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/895857c8-6bd2-4b7a-8f92-387936c9818e)
+
+
 
 
 </details>
