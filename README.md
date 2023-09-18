@@ -231,3 +231,35 @@ and-not nwell_tapped
 ```
 
 </details>
+
+
+<details>
+	<summary>DAY 4: Pre layout timing analysis and importance of good clock tree</summary>
+
+ to see the tracks file :
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/47fc7060-1772-4e60-b33d-4cd4d9040797)
+The ports should be in the intersection of vertical and horizontal tracks .
+To ensure that :
+
+In magic press ```g``` this activates the grid ,
+
+Before invoking the grid :
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/88aea553-80fd-478f-ba24-76d3ef06a9f9)
+
+After the grid invokement 
+
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/fd03075f-51d8-47b3-8aea-ebf267f5e2f5)
+
+save the layout with grid by typing ```save sky130_vsdinv.mag```
+
+Open using  ```magic -T sky130A.tch sky130_vsdinv.mag```
+
+in the console type ``` lef write sky130_vsdinv.lef```
+This will create the lef file 
+
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/3709e3e7-69d4-4cfc-9914-732157623882)
+
+
+
+
+</details>
