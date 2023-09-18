@@ -159,8 +159,75 @@ To get the transient analysis of inverter you can do
 ![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/234693ef-0fcd-41a0-a4f2-0050dd06c6b8)
 
 
+Use the drc_tests files , I have uploaded can be downloaded from there 
+
+```
+cd drc_tests
+```
+
+use the following to invoke magic :
+
+```magic -d XR```
+
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/6ea64307-9f92-4152-a3e1-2d8970affe7c)
 
 
+now open met3.mag using the command
+```
+magic -T sky130A.tech met3.mag &
+```
+Typing drc why in the tckcon window gives the drc error associated 
 
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/f5fa8da4-a504-4828-a978-ff5984a18083)
+
+Load poly by typing ```load poly ``` in tkcon window 
+
+after this you can see there is incorrect poly 
+
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/e9c41b3d-8442-4a4a-aa16-9841f31833db)
+
+To fix this:
+
+Make the following changes in sky130A.tech file :
+ Add the following lines after line 5178
+
+ ```
+spacing xhrpoly,uhrpoly,xpc allpolynonres 480 touching_illegal \
+	"xhrpoly/uhrpoly resistor spacing to diffusion < %d (poly.9)"  
+```
+
+Add the following lines after line 4815
+```
+spacing npres allpolynonres 480 touching_illegal \
+	"poly.resistor spacing to N-tap < %d (poly.9)"
+```
+
+
+![image](https://github.com/AdrikaMohanty/pes_pd/assets/84654826/a00bb55f-e75f-4fe4-8eed-d38098377ac9)
+
+
+To fix poly and diff and tap drc, make the following changes to the sky130A.tech file. Substitute the following lines in 4814 and 4815
+```
+spacing npres alldiff 480 touching_illegal \
+	"poly.resistor spacing to N-tap < %d (poly.9)"
+```
+
+To fix nwell errors write the foolowings lines after line 4728 in sky130A.tech
+```
+variants (full)
+cifmaxwidth nwell_untapped 0 bend_illegal \
+	"Nwell missing tap (nwell.4)"
+variants *
+```
+
+Add the following afetr line 1239
+```
+templayer nwell_tapped
+bloat -all nsc nwell
+ 
+templayer nwell_untapped nwell
+and-not nwell_tapped
+
+```
 
 </details>
